@@ -3,14 +3,14 @@
     <meta charset="utf-8" />
   </head>
   <body>
-    <iframe
+    {% comment %} <iframe
       width="560"
       height="315"
       src="https://www.youtube.com/embed/W7qixSou-3Y?controls=0&amp;playsinline=1"
       frameborder="0"
       allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen="false"
-    ></iframe>
+    ></iframe> {% endcomment %}
     <!-- <div id="player">
       <video
         width="352"
@@ -20,5 +20,16 @@
         webkit-playsinline
       ></video>
     </div> -->
+
+    <script src="https://player.live-video.net/1.1.2/amazon-ivs-player.min.js"></script>
+    <video id="video-player" playsinline></video>
+    <script>
+      if (IVSPlayer.isPlayerSupported) {
+        const player = IVSPlayer.create();
+        player.attachHTMLVideoElement(document.getElementById('video-player'));
+        player.load("https://36df85d59e58.us-east-1.playback.live-video.net/api/video/v1/us-east-1.870002048350.channel.h4RuyfVQ820L.m3u8"));
+        player.play();
+      }
+    </script>
   </body>
 </html>
