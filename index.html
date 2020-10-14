@@ -1,17 +1,15 @@
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-  </head>
-  <body>
+<head>
     <script src="https://player.live-video.net/1.1.2/amazon-ivs-player.min.js"></script>
-    <video id="video-player" playsinline></video>
+</head>
+
+<body>
+    <video id="video-player" width="560" height="315" controls playsinline></video>
     <script>
-      if (IVSPlayer.isPlayerSupported) {
-        const player = IVSPlayer.create();
-        player.attachHTMLVideoElement(document.getElementById('video-player'));
-        player.load("https://da911ea660cb.us-west-2.playback.live-video.net/api/video/v1/us-west-2.870002048350.channel.Ub7ROIkUOxu5.m3u8"));
-        player.play();
-      }
-    </script>
-  </body>
-</html>
+  if (IVSPlayer.isPlayerSupported) {
+    const player = IVSPlayer.create();
+    player.attachHTMLVideoElement(document.getElementById('video-player'));
+    player.load("https://da911ea660cb.us-west-2.playback.live-video.net/api/video/v1/us-west-2.870002048350.channel.Ub7ROIkUOxu5.m3u8");
+    player.play();
+  }
+</script>
+</body>
