@@ -8,7 +8,7 @@
 
 <body>
     <div class="video-container">
-        <video-js id="amazon-ivs-videojs" class="video-js vjs-4-3 vjs-big-play-centered" controls playsinline></video-js>
+        <video-js id="amazon-ivs-videojs" class="video-js vjs-4-3 vjs-big-play-centered" controls autoplay playsinline></video-js>
     </div>
     <style>
         body {
@@ -37,8 +37,8 @@
                // Play stream
                player.src("https://da911ea660cb.us-west-2.playback.live-video.net/api/video/v1/us-west-2.870002048350.channel.Ub7ROIkUOxu5.m3u8");
 			   player.play();
-			   MuteToggle(player);
             });
+			MuteToggle(player);
         })();
     </script>
 </body>
